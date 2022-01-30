@@ -1,0 +1,77 @@
+ubuntu@01f0c9c9d50b:/learn-go-with-tests$ cd 01-install-go/
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go$ ls
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go$ mkdir my-project
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go$ cd my-project/
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ go mod init
+go: cannot determine module path for source directory /learn-go-with-tests/01-install-go/my-project (outside GOPATH, module path must be specified)
+
+Example usage:
+        'go mod init example.com/m' to initialize a v0 or v1 module
+        'go mod init example.com/m/v2' to initialize a v2 module
+
+Run 'go help mod init' for more information.
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ go help mod init
+usage: go mod init [module-path]
+
+Init initializes and writes a new go.mod file in the current directory, in
+effect creating a new module rooted at the current directory. The go.mod file
+must not already exist.
+
+Init accepts one optional argument, the module path for the new module. If the
+module path argument is omitted, init will attempt to infer the module path
+using import comments in .go files, vendoring tool configuration files (like
+Gopkg.lock), and the current directory (if in GOPATH).
+
+If a configuration file for a vendoring tool is present, init will attempt to
+import module requirements from it.
+
+See https://golang.org/ref/mod#go-mod-init for more about 'go mod init'.
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ go mod init install-go
+go: creating new go.mod: module install-go
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ whereis golangci-lint
+golangci-lint:
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ sudo apt-get install golangci-lint
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package golangci-lint
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ sudo apt-get update
+Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://ppa.launchpad.net/git-core/ppa/ubuntu focal InRelease [23.8 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1470 kB]
+Get:7 http://ppa.launchpad.net/git-core/ppa/ubuntu focal/main amd64 Packages [3169 B]
+Get:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [839 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1121 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1895 kB]
+Fetched 5687 kB in 2s (3485 kB/s)
+Reading package lists... Done
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ sudo apt-get install golangci-lint
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package golangci-lint
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ # binary will be $(go env GOPATH)/bin/golangci-lint
+angci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.44.0
+
+golangci-lint --versionubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.44.0
+golangci/golangci-lint info checking GitHub for tag 'v1.44.0'
+golangci/golangci-lint info found version: 1.44.0 for v1.44.0/linux/amd64
+golangci/golangci-lint info installed /home/ubuntu/go/bin/golangci-lint
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ golangci-lint --version
+bash: golangci-lint: command not found
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ golangci-lint --version
+bash: golangci-lint: command not found
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ golangci-lint
+bash: golangci-lint: command not found
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ echo $PATH
+/home/ubuntu/.pyenv/plugins/pyenv-virtualenv/shims:/home/ubuntu/.pkenv/bin:/home/ubuntu/.tgenv/bin:/home/ubuntu/.tfenv/bin:/usr/local/go/bin:/home/ubuntu/.pyenv/shims:/home/ubuntu/.pyenv/bin:/home/ubuntu/.pkenv/bin:/home/ubuntu/.tgenv/bin:/home/ubuntu/.tfenv/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ ls ~/go/
+bin  pkg
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$ ls ~/go/bin
+golangci-lint
+ubuntu@01f0c9c9d50b:/learn-go-with-tests/01-install-go/my-project$

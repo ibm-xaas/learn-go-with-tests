@@ -1,0 +1,15 @@
+# Run:
+#   docker-compose run learn-go
+version: "3.3"
+services:
+  learn-go:
+    privileged: true
+    build:
+      context: .
+    image: ghcr.io/ibm-xaas/dev-env:latest
+    volumes:
+      # For future ssh use in development
+      - ~/.ssh:/home/ubuntu/.ssh:ro
+      - .:/learn-go-with-tests
+      - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /learn-go-with-tests
