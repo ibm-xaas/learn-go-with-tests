@@ -11,3 +11,7 @@ func (w *Wallet) Deposit(deposit int) {
 func (w *Wallet) Balance() int {
 	return w.balance
 }
+
+func main() {
+
+}

@@ -43,3 +43,7 @@ func SumAllTails(numbersToSum ...[]int) []int {
 
 	return sums
 }
+
+func main() {
+
+}

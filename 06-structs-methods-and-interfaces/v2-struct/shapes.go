@@ -18,3 +18,6 @@ type Circle struct {
 	Radius float64
 }
 */
+func main() {
+
+}

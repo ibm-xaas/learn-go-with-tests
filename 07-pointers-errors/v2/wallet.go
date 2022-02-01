@@ -37,3 +37,7 @@ func (w *Wallet) Withdraw(withdraw Bitcoin) error {
 func (w *Wallet) Balance() Bitcoin {
 	return w.balance
 }
+
+func main() {
+
+}
