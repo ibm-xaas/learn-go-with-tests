@@ -12,7 +12,8 @@ const countdownStart = 3
 
 func Countdown(out io.Writer) {
 	for i := countdownStart; i > 0; i-- {
-		time.Sleep(1 * time.Second)
+		//time.Sleep(1 * time.Second)
+		time.Sleep(1 * time.Microsecond)
 		fmt.Fprintln(out, i)
 	}
 
