@@ -20,3 +20,5 @@ func Racer(a, b string) (winner string) {
 	}
 	return b
 }
+
+func main() {}
