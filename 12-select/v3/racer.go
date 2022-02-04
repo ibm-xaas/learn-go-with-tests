@@ -20,3 +20,5 @@ func measureResponseTime(url string) time.Duration {
 	http.Get(url)
 	return time.Since(start)
 }
+
+func main() {}
