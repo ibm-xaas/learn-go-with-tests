@@ -7,6 +7,7 @@ import (
 
 func Racer(a, b string) (winner string) {
 	startA := time.Now()
+	time.Sleep(1 * time.Second)
 	http.Get(a)
 	aDuration := time.Since(startA)
 
