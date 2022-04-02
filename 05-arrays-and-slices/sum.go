@@ -1,6 +1,6 @@
 package main
 
-//func Sum(numbers [5]int) int {
+//Sum ... Sum(numbers [5]int) int {
 func Sum(numbers []int) int {
 	sum := 0
 
@@ -14,6 +14,7 @@ func Sum(numbers []int) int {
 	return sum
 }
 
+// SumAll ...
 func SumAll(numbersToSum ...[]int) []int {
 	/*
 		lengthOfNumbers := len(numbersToSum)
@@ -31,6 +32,7 @@ func SumAll(numbersToSum ...[]int) []int {
 	return sums
 }
 
+// SumAllTails ...
 func SumAllTails(numbersToSum ...[]int) []int {
 	var sums []int
 	for _, numbers := range numbersToSum {

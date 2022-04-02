@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// Racer ...
 func Racer(a, b string) (winner string) {
 	aDuration := measureResponseTime(a)
 	bDuration := measureResponseTime(b)

@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// Countdown ...
 func Countdown(buffer *bytes.Buffer) {
 	fmt.Fprint(buffer, "3")
 }

@@ -8,10 +8,12 @@ import (
 
 var tenSecondTimeout = 10 * time.Second
 
+// Racer ...
 func Racer(a, b string) (winner string, error error) {
 	return ConfigurableRacer(a, b, tenSecondTimeout)
 }
 
+// ConfigurableRacer ...
 func ConfigurableRacer(a, b string, timeout time.Duration) (winner string, error error) {
 	select {
 	case <-ping(a):

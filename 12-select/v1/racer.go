@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// Racer ...
 func Racer(a, b string) (winner string) {
 	startA := time.Now()
 	time.Sleep(1 * time.Second)

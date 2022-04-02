@@ -2,8 +2,10 @@ package concurrency
 
 import "time"
 
+// WebsiteChecker ...
 type WebsiteChecker func(string) bool
 
+// CheckWebsites ...
 func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool {
 	results := make(map[string]bool)
 

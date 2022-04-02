@@ -2,10 +2,13 @@ package main
 
 import "errors"
 
+// ErrNotFound ...
 var ErrNotFound = errors.New("could not find the word you were looking for")
 
+// Dictionary ...
 type Dictionary map[string]string
 
+// Search ...
 func (d Dictionary) Search(word string) (string, error) {
 	definition, ok := d[word]
 	if !ok {
@@ -14,6 +17,7 @@ func (d Dictionary) Search(word string) (string, error) {
 	return definition, nil
 }
 
+// Add ...
 func (d Dictionary) Add(key, value string) {
 	d[key] = value
 }

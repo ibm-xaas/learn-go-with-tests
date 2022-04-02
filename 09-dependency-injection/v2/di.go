@@ -6,6 +6,7 @@ import (
 	"os"
 )
 
+// Greet ...
 func Greet(writer io.Writer, name string) {
 	fmt.Fprintf(writer, "Hello, %s", name)
 }
