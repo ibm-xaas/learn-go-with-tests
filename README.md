@@ -4,6 +4,8 @@
 
 My friend Brad A. recommended this gitbook for beginner: https://quii.gitbook.io/learn-go-with-tests/ , and I am going to try reading and practicing. (01/29/2022)
 
+Time passes by; time to restart (04/01/2022)
+
 test:
 
 ```
